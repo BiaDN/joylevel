@@ -163,8 +163,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: -155.44977}
-  m_SizeDelta: {x: 998, y: 660.8984}
+  m_AnchoredPosition: {x: 1, y: -279.9344}
+  m_SizeDelta: {x: 998, y: 909.8677}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2172862
 MonoBehaviour:
@@ -536,7 +536,7 @@ GameObject:
   - component: {fileID: 186445530}
   - component: {fileID: 186445529}
   m_Layer: 0
-  m_Name: Button (3)
+  m_Name: BtnContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1017,6 +1017,7 @@ GameObject:
   - component: {fileID: 254516499}
   - component: {fileID: 254516498}
   - component: {fileID: 254516497}
+  - component: {fileID: 254516500}
   m_Layer: 0
   m_Name: BtnCopy
   m_TagString: Untagged
@@ -1088,7 +1089,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 254516498}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 254516500}
+        m_TargetAssemblyTypeName: ListTeam, Assembly-CSharp
+        m_MethodName: btnCopyOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &254516498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1127,6 +1140,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 254516495}
   m_CullTransparentMesh: 1
+--- !u!114 &254516500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254516495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d8152b337ad21b11a334c556e4a3018, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemTemplate: {fileID: 2135499748}
+  content: {fileID: 2172860}
 --- !u!1 &294362859
 GameObject:
   m_ObjectHideFlags: 0
@@ -2371,7 +2398,7 @@ GameObject:
   - component: {fileID: 535876624}
   - component: {fileID: 535876623}
   m_Layer: 0
-  m_Name: Button
+  m_Name: BtnContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3798,7 +3825,7 @@ GameObject:
   - component: {fileID: 911380220}
   - component: {fileID: 911380219}
   m_Layer: 0
-  m_Name: Button (4)
+  m_Name: BtnContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5213,7 +5240,7 @@ GameObject:
   - component: {fileID: 1269490648}
   - component: {fileID: 1269490647}
   m_Layer: 0
-  m_Name: Button
+  m_Name: BtnContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6546,7 +6573,7 @@ GameObject:
   - component: {fileID: 1554231351}
   - component: {fileID: 1554231350}
   m_Layer: 0
-  m_Name: Button (2)
+  m_Name: BtnContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8084,7 +8111,7 @@ GameObject:
   - component: {fileID: 2135499751}
   - component: {fileID: 2135499750}
   m_Layer: 0
-  m_Name: Button (1)
+  m_Name: BtnContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
