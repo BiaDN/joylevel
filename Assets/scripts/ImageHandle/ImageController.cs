@@ -37,7 +37,7 @@ namespace Assets.scripts.ImageHandle
         IEnumerator Start()
         {
             //instance = this;
-            Debug.Log(_urlImg);
+            Debug.Log("IMG"+ _urlImg);
             WWW www = new WWW(_urlImg);
             yield return www;
             img.texture = www.texture;
