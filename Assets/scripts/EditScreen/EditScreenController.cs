@@ -22,6 +22,8 @@ namespace Assets.scripts.EditScreen
         public GameObject BtnLock;
         public GameObject panelEditItemCharacter;
         public GameObject LayoutBtnSkillScale;
+        public GameObject LayoutEditPositionCharacter;
+        public GameObject txtNameCharacter;
         // Use this for initialization
         void hideAllGUI()
         {
@@ -31,6 +33,8 @@ namespace Assets.scripts.EditScreen
             //BtnLock.SetActive(false);
             panelEditItemCharacter.SetActive(false);
             LayoutBtnSkillScale.SetActive(false);
+            LayoutEditPositionCharacter.SetActive(false);
+            txtNameCharacter.SetActive(false);
         }
         void Awake()
         {
@@ -90,12 +94,15 @@ namespace Assets.scripts.EditScreen
             BtnLockCopy.transform.parent = panelEditItemCharacter.transform;
 
 
-            GameObject txtNameCharacter = GameObject.Find("txtNameCharacter");
+            //GameObject txtNameCharacter = GameObject.Find("txtNameCharacter");
             GameObject imgCharacter = GameObject.Find("AvtEditScreen");
             ImageController controllerImg = imgCharacter.GetComponent<ImageController>();
             controllerImg.setGameObject(imgCharacter);
             controllerImg.setUriImage(data["avatar"].ToString());
-            txtNameCharacter.GetComponent<Text>().text = data["name"].ToString();
+            //txtNameCharacter.GetComponent<Text>().text = data["name"].ToString();
+            txtNameCharacter.transform.GetComponent<Text>().text = data["name"].ToString();
+            Debug.Log("txtNameCharacter" + data["name"].ToString());
+            txtNameCharacter.SetActive(true);
         }
 
         void addStar()

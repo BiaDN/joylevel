@@ -48,7 +48,7 @@ namespace Assets.scripts.ListItem
             for (var i = 0; i < 9; i++)
             {
                 //listCharacter.Count
-                string name = "Man hinh" + " " + (i + 1);
+                string name = "TEAM" + " " + (i + 1);
                 var copy = Instantiate(itemTemplate);
                 GameObject title = copy.transform.GetChild(0).gameObject;
                 GameObject txtEmpty = copy.transform.GetChild(2).gameObject;
